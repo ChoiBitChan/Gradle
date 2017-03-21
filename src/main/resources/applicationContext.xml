@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+
+
+
+	<!-- 
+	<bean name="writeArticleService" class="spring.chap01.WriteArticleServiceImpl">
+		<constructor-arg>
+			<ref bean="articleDao"/>
+		</constructor-arg>
+	</bean>
+	 -->
+	
+	<!-- 
+	<bean name="writeArticleService" class="spring.chap01.WriteArticleServiceImpl" c:articleDao-ref="articleDao"/>
+	
+	<bean name="articleDao" class="spring.chap01.MySQLArticleDao"/>
+	
+	<bean id="bar" class="spring.DI.Bar"/>
+	<bean id="baz" class="spring.DI.Baz"/>
+	 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 
+	<bean id="foo" class="spring.DI.Foo">
+		<constructor-arg ref="bar"/>
+		<constructor-arg ref="baz"/>
+	</bean>
+	-->
+	 
+	 <!-- 
+	 <bean id="foo" class="spring.DI.Foo">
+	 	<constructor-arg value="100"/>
+	 	<constructor-arg value="200"/>
+	 	<constructor-arg ref="bar"/>
+	 </bean>
+	 -->
+	 
+	 <!-- 
+	 <bean id="foo" class="spring.DI.Foo">
+	 	<property name="bar" ref="bar"/>
+	 	<property name="baz" ref="baz"/>
+	 	<property name="i" value="10"/>
+	 </bean>
+	  -->
+	 
+	 <!-- 
+	 <bean id="foo" class="spring.DI.Foo" p:bar-ref="bar" p:baz-ref="baz" p:i="10"/>
+	  -->
+	 
+	 <!-- 
+	 <bean id="foo" class="spring.DI.Foo">
+	 	<lookup-method name="getBar" bean="bar"/>
+	 </bean>
+	  -->
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 <!-- 
+	 <bean id="collection" class="spring.DI.CollEx">
+	 	<property name="listValue">
+	 		<list value-type="java.lang.Integer">
+	 			<value>10</value>
+	 			<value>20</value>
+	 		</list>
+	 	</property>
+	 	
+	 	<property name="mapValue">
+	 		<map>
+	 			<entry>
+	 				<key><value>a</value></key>
+	 				<value>30</value>
+	 			</entry>
+	 			<entry>
+	 				<key><value>b</value></key>
+	 				<value>40</value>
+	 			</entry>
+	 		</map>
+	 	</property>
+	 	
+	 	<property name="propValue">
+	 		<props>
+	 			<prop key="a">50</prop>
+	 			<prop key="b">60</prop>
+	 		</props>
+	 	</property>
+	 </bean>
+	  -->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <bean id="foo" class="spring.DI2.Foo" c:bar-ref="bar" autowire="byName"/>
+	  <bean id="bar" class="spring.DI2.Bar"/>
+	  <bean id="baz" class="spring.DI2.Baz"/>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	 
+</beans>

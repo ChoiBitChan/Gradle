@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="member">
+		
+		<select id="selectAll" resultType="spring.mybatis.User">
+			select * from spring_member
+		</select>
+		
+		<select id="selectOne" parameterType="string" resultType="spring.mybatis.User">
+			select * from spring_member where id = #{id}
+		</select>
+		
+		<insert id="insert" parameterType="spring.mybatis.User">
+			insert into spring_member values (#{id}, #{password}, #{name}, #{email})
+		</insert>
+		
+		<update id="updateName" parameterType="spring.mybatis.User">
+			update spring_member set name = #{name} where id = #{id}
+		</update>
+		
+		<delete id="delete" parameterType="string">
+			delete from spring_member where id = #{id}
+		</delete>
+	
+	</mapper>
